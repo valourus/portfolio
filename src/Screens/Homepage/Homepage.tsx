@@ -1,12 +1,19 @@
 import React from 'react';
+import {createUseStyles} from 'react-jss';
 
-export default class Homepage extends React.Component {
-    
-    constructor(props: any) {
-        super(props);
-    }
+const styles = createUseStyles({
+    kaas: {
+        backgroundColor: 'red',
+    } 
+ });
 
-    render(): JSX.Element {
-        return <h1>homepage</h1>
-    }
+
+ const Homepage  = () => {
+
+    const classes = styles();
+
+    return <h1 className={classes.kaas}>homepage</h1>
+
 }
+
+export default Homepage;
