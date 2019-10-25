@@ -6,9 +6,29 @@ const styles = createUseStyles({
     navbar: {
         backgroundColor: 'black',
         height: '100vh',
-        width: '50px'
-    }
+        width: '60px',
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column'
+    },
 
+    title: {
+        margin: 0,
+    },
+
+    titleContainer: {
+        marginBottom: '15vh',
+    },
+
+    iconContainer: {
+        height: '40vh',
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        marginBottom: '25vh'
+    }
 });
 
 export const Navbar: FunctionComponent = () => {
@@ -17,7 +37,24 @@ export const Navbar: FunctionComponent = () => {
 
     return (
         <div className={classes.navbar}>
-            navbar
+            <div className={classes.titleContainer}>
+                <h2 className={classes.title}>Hoi</h2>
+                <h2 className={classes.title}>Kei</h2>
+            </div>
+            <div className={classes.iconContainer}>
+                <div>icon</div>
+                <div>icon</div>
+                <div>icon</div>
+                <div>icon</div>
+                <div>icon</div>
+                <div>icon</div>
+            </div>
+            <div>
+                <div>icon</div>
+                <div>icon</div>
+                <div>icon</div>
+                <div>icon</div>
+            </div>
         </div>
     )
 }

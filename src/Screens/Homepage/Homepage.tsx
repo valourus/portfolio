@@ -1,18 +1,31 @@
 import React from 'react';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
+import { HorizontalSplitLayout } from '../../Layouts/HorizontalSplitLayout';
 
 const styles = createUseStyles({
-    kaas: {
-        backgroundColor: 'red',
-    } 
- });
+
+    topContainer: {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'flex-end'
+    },
+    bottomContainer: {
+
+    }
+});
 
 
- const Homepage  = () => {
+const Homepage = () => {
 
     const classes = styles();
 
-    return <h1 className={classes.kaas}>homepage</h1>
+    return (
+        <div>
+            <HorizontalSplitLayout />
+            <h1>hoikei</h1>
+        </div>
+    )
 
 }
 

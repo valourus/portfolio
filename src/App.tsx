@@ -7,18 +7,18 @@ import {
 } from "react-router-dom";
 import { Navbar } from './Shared/Navbar/Navbar';
 
-
 const App: FunctionComponent = (): JSX.Element => {
   return (
-    <div>
-    <Navbar />
-    <Router>
-     <Switch>
-       <Route exact path="/"><Homepage /></Route>
+    <div style={{display: 'flex'}}>
+      <Navbar />
+      <Router>
+      <Switch>
+        
+        <Route exact path="/"><Homepage /></Route>
 
-       <Route path="*" Component={<h1>404 - not found</h1>} />
-    </Switch>
-   </Router>
+        <Route path="*" Component={<h1>404 - not found</h1>} />
+      </Switch>
+    </Router>
    </div>
   );
 }

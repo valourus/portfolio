@@ -1,0 +1,19 @@
+@font-face {
+    font-family: art;
+    font-style: normal;
+    font-weight: normal;
+    src: local('The Friday Stroke Regular'), url('/public/fonts/ Stroke Font by 7NTypes.woff') format('woff');
+}
+
+@font-face {
+    font-family: development;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Imperfecta Rough Regular'), url('/public/fonts/Regular Rough.woff') format('woff');
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: development, art;
+}
