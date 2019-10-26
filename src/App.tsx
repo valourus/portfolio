@@ -10,17 +10,18 @@ import './global.css';
 
 const App: FunctionComponent = (): JSX.Element => {
   return (
-    <div style={{display: 'flex'}}>
-      <Navbar />
+    <div style={{ display: 'flex' }}>
       <Router>
-      <Switch>
-        
-        <Route exact path="/"><Homepage /></Route>
+        <Navbar />
+        <Switch>
 
-        <Route path="*" Component={<h1>404 - not found</h1>} />
-      </Switch>
-    </Router>
-   </div>
+          <Route exact path="/"><Homepage /></Route>
+
+          <Route path="*" Component={<h1>404 - not found</h1>} />
+
+        </Switch>
+      </Router>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
+import { NavIcon } from './NavIcon';
 
 const styles = createUseStyles({
 
@@ -22,7 +23,7 @@ const styles = createUseStyles({
     },
 
     iconContainer: {
-        height: '40vh',
+        height: '30vh',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
@@ -42,12 +43,10 @@ export const Navbar: FunctionComponent = () => {
                 <h2 className={classes.title}>Kei</h2>
             </div>
             <div className={classes.iconContainer}>
-                <div>icon</div>
-                <div>icon</div>
-                <div>icon</div>
-                <div>icon</div>
-                <div>icon</div>
-                <div>icon</div>
+                <NavIcon iconName="home" pageName="/" />
+                <NavIcon iconName="person" pageName="contact" />
+                <NavIcon iconName="programming" pageName="game-dev" />
+                <NavIcon iconName="pencil" pageName="/art" />
             </div>
             <div>
                 <div>icon</div>
