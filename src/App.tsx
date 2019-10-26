@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import { Navbar } from './Shared/Navbar/Navbar';
+import './global.css';
 
 const App: FunctionComponent = (): JSX.Element => {
   return (
