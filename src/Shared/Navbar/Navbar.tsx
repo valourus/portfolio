@@ -1,6 +1,7 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { NavIcon } from './NavIcon';
+import { NavLink } from 'react-router-dom';
+import { HomeIcon, PersonIcon, CodeIcon, PencilIcon } from '../Icons/index';
 
 const styles = createUseStyles({
 
@@ -29,12 +30,16 @@ const styles = createUseStyles({
         flexDirection: 'column',
         justifyContent: 'space-between',
         marginBottom: '25vh'
+    },
+    active: {
+        fill: 'red !important',
     }
 });
 
 export const Navbar: FunctionComponent = () => {
-    
+
     const classes = styles();
+    const [currPage, setCurrPage] = useState(window.location.pathname);
 
     return (
         <div className={classes.navbar}>
@@ -43,10 +48,21 @@ export const Navbar: FunctionComponent = () => {
                 <h2 className={classes.title}>Kei</h2>
             </div>
             <div className={classes.iconContainer}>
-                <NavIcon iconName="home" pageName="/" />
-                <NavIcon iconName="person" pageName="contact" />
-                <NavIcon iconName="programming" pageName="game-dev" />
-                <NavIcon iconName="pencil" pageName="/art" />
+                <NavLink to="/" exact onClick={() => setCurrPage('/')}>
+                    <HomeIcon  color={currPage == '/' ? 'red' : '#80828a'} />
+                </NavLink>
+
+                <NavLink to="/about-me" exact onClick={() => setCurrPage('/about-me')}>
+                    <PersonIcon color={currPage == '/about-me' ? 'red' : '#80828a'} />
+                </NavLink>
+
+                <NavLink to="/game-dev" exact onClick={() => setCurrPage('/game-dev')}>
+                    <CodeIcon color={currPage == '/game-dev' ? 'red' : '#80828a'} />
+                </NavLink>
+
+                <NavLink to="/art" exact onClick={() => setCurrPage('/art')}>
+                    <PencilIcon color={currPage == '/art' ? 'red' : '#80828a'} />
+                </NavLink>
             </div>
             <div>
                 <div>icon</div>
