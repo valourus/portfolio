@@ -1,7 +1,7 @@
 import React from 'react';
 import { VerticalSplitBackground } from '../../backgrounds/VerticalSplitBackground';
-import { createUseStyles } from 'react-jss';
 import { Theme } from '../../Utils/Theme';
+import { createUseStyles } from 'react-jss';
 
 const styles = createUseStyles({
     container: {
@@ -9,6 +9,7 @@ const styles = createUseStyles({
         flexDirection: 'column',
         alignItems: 'center',
         width: '50%',
+        marginLeft: '50%',
     },
     title: {
         marginTop: '25%',
@@ -26,15 +27,13 @@ const styles = createUseStyles({
     },
 });
 
-export const AboutMe = () => {
-
+export const Skills = () => {
     const classes = styles();
-
     return (
         <>
-            <VerticalSplitBackground colorRight={Theme.color.primary} colorLeft={Theme.color.secondary} />
+            <VerticalSplitBackground colorRight={Theme.color.secondary} colorLeft={Theme.color.primary} />
             <div className={classes.container}>
-                <h1 className={classes.title}>About Me</h1>
+                <h1 className={classes.title}>Skills</h1>
                 <p className={classes.content}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices malesuada lacus, id mollis ante dapibus vitae. Duis vel neque malesuada, dictum erat eget, malesuada felis. Fusce lobortis ligula sit amet feugiat faucibus. Nullam sed tortor et ex faucibus viverra cursus vitae sapien. Nullam eu enim malesuada, volutpat libero nec, gravida dolor. Aliquam convallis pharetra lacus vehicula sagittis. Nam hendrerit blandit ex ac placerat. Nam quis fermentum odio, molestie egestas nulla. Nunc dictum hendrerit sagittis. </p>
             </div>
         </>

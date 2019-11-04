@@ -20,10 +20,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    {
-                        //TODO: fix the css loading on the webpack devserver
-                        loader: "style-loader" ,
-                    },
+                    "style-loader",
                     'css-loader',
                 ],
 

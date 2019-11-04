@@ -8,6 +8,8 @@ import {
 import { Navbar } from './Shared/Navbar/Navbar';
 import './global.css';
 import { AboutMe } from './Screens/AboutMe/AboutMe';
+import { Skills } from './Screens/Skills/Skills';
+import { DevelopmentPage } from './Screens/Development/DevelopmentPage';
 
 const App: FunctionComponent = (): JSX.Element => {
   return (
@@ -19,6 +21,8 @@ const App: FunctionComponent = (): JSX.Element => {
           <Route exact path="/"><Homepage /></Route>
 
           <Route exact path="/about-me"><AboutMe /></Route>
+          <Route exact path="/skills"><Skills /></Route>
+          <Route exact path="/game-dev"><DevelopmentPage /></Route>
 
           <Route path="*" Component={<h1>404 - not found</h1>} />
 
