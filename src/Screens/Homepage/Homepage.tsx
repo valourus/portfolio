@@ -1,17 +1,49 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { HorizontalSplitLayout } from '../../Layouts/HorizontalSplitLayout';
+import { HorizontalSplitBackground } from '../../backgrounds/HorizontalSplitBackground';
+import { Theme } from '../../Utils/Theme';
 
 const styles = createUseStyles({
-
-    topContainer: {
-        width: '100%',
-        height: '100%',
+    container: {
+        paddingLeft: Theme.constants.navBarWidth,
         display: 'flex',
-        alignItems: 'flex-end'
+        width: '100%',
     },
-    bottomContainer: {
+    nameContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100.5vh',
+    },
+    hoiTitle: {
+        fontSize: '6rem',
+        color: Theme.color.primary,
+    },
+    keiTitle: {
+        fontSize: '6rem',
+        color: Theme.color.secondary,
+        fontFamily: Theme.font.art,
+        display: 'flex',
+        width: '100%',
+        justifyContent: 'center',
 
+    },
+    aboutmeContainer: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '3rem',
+        marginLeft: '16%',
+    },
+    gameDevText: {
+        color: Theme.color.primary,
+    },
+    gameArtistText: {
+        color: Theme.color.secondary,
+        fontFamily: Theme.font.art,
     }
 });
 
@@ -21,10 +53,21 @@ const Homepage = () => {
     const classes = styles();
 
     return (
-        <div>
-            <HorizontalSplitLayout />
-            <h1>hoikei</h1>
-        </div>
+        <>
+            <HorizontalSplitBackground />
+            <section className={classes.container}>
+                <div className={classes.nameContainer}>
+                    <div className={classes.hoiTitle}>hoi</div>
+                    <div className={classes.keiTitle}>kei</div>
+                </div>
+
+                <div className={classes.aboutmeContainer}>
+                    <div className={classes.gameDevText}>GAME DEVELOPER</div>
+                    <div style={{color:'white'}}>&</div>
+                    <div className={classes.gameArtistText}>Freelance Artist</div>
+                </div>
+            </section>
+        </>
     )
 
 }

@@ -13,16 +13,20 @@ module.exports = {
     devtool: 'inline-source-map',
     output: {
         path: path.resolve('dist'),
-        filename: 'main.bundle.js'
+        filename: 'main.bundle.js',
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" }
-                ]
+                    {
+                        //TODO: fix the css loading on the webpack devserver
+                        loader: "style-loader" ,
+                    },
+                    'css-loader',
+                ],
+
             },
             {
                 test: /\.js$/,
@@ -34,10 +38,16 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-        ]
+        ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig],
+    devServer: {
+        compress: true,
+        port: 8080,
+        hot: true,
+        historyApiFallback: true,
+    },
 }

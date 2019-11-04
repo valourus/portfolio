@@ -2,13 +2,15 @@ import React, { FunctionComponent, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { NavLink } from 'react-router-dom';
 import { HomeIcon, PersonIcon, CodeIcon, PencilIcon } from '../Icons/index';
+import { Theme } from '../../Utils/Theme';
 
 const styles = createUseStyles({
 
     navbar: {
-        backgroundColor: 'black',
+        padding: '10px 0',
+        backgroundColor: '#191B1D',
         height: '100vh',
-        width: '60px',
+        width: Theme.constants.navBarWidth,
         color: 'white',
         display: 'flex',
         alignItems: 'center',

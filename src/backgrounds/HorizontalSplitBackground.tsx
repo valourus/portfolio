@@ -1,13 +1,15 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { createUseStyles } from 'react-jss';
+import { Theme } from '../Utils/Theme';
 
 const styles = createUseStyles({
     container: {
         // TODO: do some calc with the navbar width
-        width: '96.9%',
+        width: '100%',
         height: '100vh',
         display: 'inline-block',
         position: 'absolute',
+        zIndex: '-1',
     },
 
     section: {
@@ -15,15 +17,15 @@ const styles = createUseStyles({
     },
 
     top: {
-        backgroundColor: 'grey',
+        backgroundColor: Theme.color.secondary,
     },
 
     bottom: {
-        backgroundColor: 'red',
+        backgroundColor: Theme.color.primary,
     }
 });
 
-export const HorizontalSplitLayout: FunctionComponent = () => {
+export const HorizontalSplitBackground: FunctionComponent = () => {
 
     const classes = styles();
 

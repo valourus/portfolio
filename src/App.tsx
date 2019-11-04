@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Navbar } from './Shared/Navbar/Navbar';
 import './global.css';
+import { AboutMe } from './Screens/AboutMe/AboutMe';
 
 const App: FunctionComponent = (): JSX.Element => {
   return (
@@ -16,6 +17,8 @@ const App: FunctionComponent = (): JSX.Element => {
         <Switch>
 
           <Route exact path="/"><Homepage /></Route>
+
+          <Route exact path="/about-me"><AboutMe /></Route>
 
           <Route path="*" Component={<h1>404 - not found</h1>} />
 
