@@ -4,8 +4,7 @@ import { Theme } from '../Utils/Theme';
 
 const styles = createUseStyles({
     top: {
-
-        width: '100vw',
+        width: '97vw',
         height: '100vh',
         clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)',
         position: 'absolute',
